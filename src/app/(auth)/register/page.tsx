@@ -77,9 +77,9 @@ const Register = () => {
                     })
                     setLoadingId(loadingId)
                 },
-                onError(error) {
+                onError() {
                     setLoading(false)
-                    toast.error(error.shortMessage, { duration: 4000, id })
+                    toast.error('User denied transaction', { duration: 4000, id })
                 },
             })
         } catch (error) {
